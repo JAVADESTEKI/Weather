@@ -113,7 +113,53 @@ class MainActivity : AppCompatActivity() {
             txtMaxDegree.text = "${weather.main?.tempMax?.let { Math.round(it) } ?: 0}°"
             txtMinDegree.text = "${weather.main?.tempMin?.let { Math.round(it) } ?: 0}°"
 
+            updateCurrentDescriptionCardInfo(weather)
         }
+    }
+
+    private fun updateCurrentDescriptionCardInfo(weather: CurrentWeatherResponse) {
+        val icon = when (weather.weather?.get(0)?.main ?: "-") {
+            "Rain", "Drizzle", "Thunderstorm" -> {
+                binding.txtDescriptionStatus.text =
+                    weather.rain?.h.toString() + " mm/h"
+                binding.txtDescription.text = "Last 1h rain"
+                R.drawable.img_rainy
+            }
+
+            "Clouds" -> {
+                binding.txtDescriptionStatus.text =
+                    weather.clouds?.all.toString() + " %"
+                binding.txtDescription.text = "Cloudiness"
+                R.drawable.img_cloudy
+
+            }
+
+            "Snow" -> {
+                binding.txtDescriptionStatus.text =
+                    weather.weather?.get(0)?.description.toString() + " "
+                binding.txtDescription.text = "Status"
+                R.drawable.img_snowy
+            }
+
+            "Mist", "Fog", "Haze" -> {
+                binding.txtDescriptionStatus.text =
+                    weather?.visibility.toString() + " m"
+                binding.txtDescription.text = "Visibility"
+                R.drawable.img_visibility
+            }
+
+            else -> {
+                binding.txtDescriptionStatus.text =
+                    weather?.main?.pressure.toString() + " hPAa"
+                binding.txtDescription.text = "Pressure"
+                R.drawable.img_pressure
+            }
+        }
+        Glide.with(binding.root.context)
+            .load(icon)
+            .into(binding.imgDescription)
+
+
     }
 
     private fun updateForecastUI(forecast: ForecastResponse) {
