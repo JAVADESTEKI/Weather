@@ -66,6 +66,31 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/txtinptlayoutAddCity"
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="#FDFDFD"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#B8C2CA"
+                app:hintTextColor="#7F8C8D"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgAddingCar">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/edtCityAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter city name"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="#2C3E50"
+                    android:textSize="14dp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
 
