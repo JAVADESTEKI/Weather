@@ -46,7 +46,7 @@ class CityListActivity : AppCompatActivity() {
             cities?.let {
                 binding.progressBar2.visibility = View.GONE
                 cityAdapter.differ.submitList(it)
-                binding.cityView.apply {
+                binding.addingCityRecyclerView.apply {
                     layoutManager = LinearLayoutManager(
                         this@CityListActivity,
                         LinearLayoutManager.VERTICAL,
@@ -70,7 +70,7 @@ class CityListActivity : AppCompatActivity() {
     }
 
     private fun setupSearch() {
-        binding.cityEdt.addTextChangedListener(object : TextWatcher {
+        binding.edtCityAdd.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
