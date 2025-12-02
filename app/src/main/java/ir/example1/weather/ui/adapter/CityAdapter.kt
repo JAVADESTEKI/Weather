@@ -26,7 +26,8 @@ class CityAdapter : RecyclerView.Adapter<CityAdapter.ViewHolder>() {
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val city = differ.currentList[position]
 
-        holder.binding.cityTxt1.text = city.name ?: "نامشخص"
+        holder.binding.txtcityFinds.text = city.name ?: "نامشخص"
+        holder.binding.txtContryOfcityFinds.text = city.country ?: "نامشخص"
 
         holder.binding.root.setOnClickListener {
             val intent = Intent(holder.binding.root.context, MainActivity::class.java).apply {
