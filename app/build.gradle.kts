@@ -64,6 +64,9 @@ dependencies {
     implementation(libs.lifecycle.livedata)
     implementation(libs.glide)
 
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx)
+
 
     implementation(libs.coroutines.android)
 
