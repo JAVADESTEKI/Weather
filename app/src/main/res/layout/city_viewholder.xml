@@ -23,7 +23,7 @@
             android:paddingLeft="25dp">
 
             <TextView
-                android:id="@+id/txtcityFinds"
+                android:id="@+id/txtCityFinds"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="City name"
