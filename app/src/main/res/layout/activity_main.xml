@@ -74,6 +74,7 @@
         app:layout_constraintTop_toTopOf="@+id/gdAMainH07">
 
         <ImageView
+            android:id="@+id/moreCity"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="#04082D"
@@ -84,10 +85,10 @@
             android:foregroundTint="#2B8FDC"
             android:outlineProvider="none"
             android:src="@drawable/chevron_down"
-            app:layout_constraintBottom_toTopOf="@+id/gdAMainH16"
+            app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/gdAMainV80"
-            app:layout_constraintTop_toTopOf="@+id/gdAMainH07" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.cardview.widget.CardView>
 
 
@@ -116,10 +117,10 @@
             android:foregroundTint="#2B8FDC"
             android:outlineProvider="none"
             android:src="@drawable/add"
-            app:layout_constraintBottom_toTopOf="@+id/gdAMainH16"
+            app:layout_constraintBottom_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/gdAMainV80"
-            app:layout_constraintTop_toTopOf="@+id/gdAMainH07" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.cardview.widget.CardView>
 
