@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
         binding.addCity.setOnClickListener {
             startActivity(Intent(this, CityListActivity::class.java))
         }
+
+        binding.refreshCurrunt.setOnClickListener {
+            loadWeatherData()
+        }
     }
 
     private fun setupWindow() {
